@@ -1,4 +1,4 @@
-# [Fuzzy Prompt for Knowledge-based VQA]
+# [Fuzzy Prompt Task]
 
 ## Code Availability
 
