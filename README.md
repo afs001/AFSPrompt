@@ -42,8 +42,8 @@ This framework can be applied to some VQA datasets, such as OK-VQA, A-OKVQA, Tex
 In addition, in our framework, the training set is used as a candidate set of demonstration examples.
 
 ### Examples Filter
-
-The directory contains scripts and configurations for handling candidate examples using `CLIP` models.
+This module provides scripts and configurations for handling candidate examples using `CLIP` models.  
+For related implementations, see: https://github.com/MILVLG/prophet
 
 ### Feature processing
 The features used in this framework are question (Q), Caption (C), optional feature tag (T), pre-answer (A) and knowledge (K).
@@ -60,7 +60,10 @@ The `AFS rerank system` directory contains modules for assertion and scoring.
 - `score module` is used for scoring the generated examples.
 
 ### AFS Prompting
-This module is developed based on https://github.com/MILVLG/prophet.
+For related implementations, see: https://github.com/MILVLG/prophet
+
+## Acknowledgements
+This project is developed based on [https://github.com/MILVLG/prophet](https://github.com/MILVLG/prophet).
 
 ## Code update progress
 - [x] Organize project structure and main modules
