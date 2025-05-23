@@ -42,8 +42,8 @@ This framework can be applied to some VQA datasets, such as OK-VQA, A-OKVQA, Tex
 In addition, in our framework, the training set is used as a candidate set of demonstration examples.
 
 ### Examples Filter
-This module provides scripts and configurations for handling candidate examples using `CLIP` models.  
-For related implementations, see: https://github.com/MILVLG/prophet
+This module provides scripts and configurations for handling candidate examples using `CLIP` or `MCAN` models.  
+For related implementations, see: [https://github.com/microsoft/PICa](https://github.com/microsoft/PICa) [https://github.com/MILVLG/prophet](https://github.com/MILVLG/prophet)
 
 ### Feature processing
 The features used in this framework are question (Q), Caption (C), optional feature tag (T), pre-answer (A) and knowledge (K).
