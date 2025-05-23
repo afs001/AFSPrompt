@@ -1,5 +1,9 @@
-# [Axiomatic Fuzzy Set Prompt Task]
+# [AFSPrompt: An Axiomatic Fuzzy Set Prompt Pipeline for Knowledge-Based VQA]
+Despite the impressive few-shot performance of in-context learning (ICL) in knowledge-based visual question answering (VQA), existing research often prioritizes addressing the image information gap in VQA, while placing less emphasis on organizing appropriate demonstrations (e.g., in-context examples) to support this task. 
+Recent studies, however, have shown that ICL performance is sensitive to the organization of demonstrations. To address this, we introduce axiomatic fuzzy set (AFS) theory into knowledge-based VQA, leveraging its unsupervised and interpretable nature to effectively organize demonstrations by describing each candidate with semantic concepts,
+thereby enhancing both the understanding and trustworthiness of the decision-making process. In this paper, we propose AFSPrompt, a train-free example selection and ranking framework based on AFS theory for knowledge-based VQA tasks. After filtering irrelevant examples using multimodal embeddings, we apply AFS logic to integrate comparison information from candidates with multi-dimensional features. Furthermore, to reduce reliance on large-scale language model APIs such as OpenAI and facilitate model deployment, we employ a smaller 7B LLM as the knowledge engine to answer questions based on the optimized prompt. Through extensive evaluations on two datasets, we demonstrate the effectiveness of AFSPrompt within a lightweight pipeline for knowledge-based VQA tasks. 
 
+![AFSPrompt](./docs/afsprompt.png)
 ## Project Structure
 ```plantuml
 AFSPrompt/
