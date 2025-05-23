@@ -59,6 +59,8 @@ The `AFS rerank system` directory contains modules for assertion and scoring.
 - `example rerank module` is used for reranking examples.
 - `score module` is used for scoring the generated examples.
 
+For the Matlab implementation of AFS theory, please refer to: https://github.com/xdliuafs/AFS
+
 ### AFS Prompting
 For related implementations, see: https://github.com/MILVLG/prophet
 
