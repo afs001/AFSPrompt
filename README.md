@@ -62,6 +62,7 @@ The `AFS rerank system` directory contains modules for assertion and scoring.
 For the Matlab implementation of AFS theory, please refer to: https://github.com/xdliuafs/AFS
 
 ### AFS Prompting
+This module implements the AFS prompting system and supports various small large language models (such as Mistral, Llama, Gemma) as knowledge engines.  
 For related implementations, see: https://github.com/MILVLG/prophet
 
 ## Acknowledgements
