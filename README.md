@@ -64,7 +64,7 @@ This module is developed based on https://github.com/MILVLG/prophet.
 
 ## Code update progress
 - [x] Organize project structure and main modules
-- [] Internal code testing and optimization
+- [ ] Internal code testing and optimization
 - [x] Write main documentation (README, usage instructions, etc.)
 - [ ] Code release (to be made public after paper acceptance)
 - [ ] Release example data and configurations
