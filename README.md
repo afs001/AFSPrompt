@@ -72,7 +72,7 @@ This project is developed based on [https://github.com/MILVLG/prophet](https://g
 ```bibte
 @article{wang2025afsprompt,
     title = {AFSPrompt: An Axiomatic Fuzzy Set Prompt Pipeline for Knowledge-Based VQA},
-    author = {Zhiwei Wang, Qi Lang, Xiaodong Liu, Hao Zhang},
+    author = {Zhiwei Wang, Qi Lang, Xiaodong Liu, and Hao Zhang},
     journal = {IEEE Transactions on Neural Networks and Learning Systems},
     year = {2025},
     doi = {10.1109/TNNLS.2025.3573267}
