@@ -1,0 +1,41 @@
+# config.yaml
+
+TASK_PATHS:
+  vqav2_train:
+    QUESTIONS_FILE: "data/dataset/VQAv2/vqav2_train_questions.json"
+    IID2IMAGE_NAME: "data/dataset/VQAv2/vqav2_train_img_name.json"
+    IMAGES_PATH: "E:/2023/VQA/OFAALL/OFA_MAIN/data/train2014/"
+    IMAGES_FEATS_PATH: "candiate_examples_clip/img_feats/train2014/"
+    TEXTS_FEATS_PATH: "candiate_examples_clip/text_feats/VQAv2/"
+
+  vqav2_val:
+    QUESTIONS_FILE: "data/dataset/VQAv2/vqav2_val_questions.json"
+    IID2IMAGE_NAME: "data/dataset/VQAv2/vqav2_val_img_name.json"
+    IMAGES_PATH: "E:/2023/VQA/OFAALL/OFA_MAIN/data/val2014/"
+    IMAGES_FEATS_PATH: "candiate_examples_clip/img_feats/val2014/"
+
+  fvqa_train:
+    QUESTIONS_FILE: "data/dataset/FVQA/f0/train_fvqa.json"
+    IID2IMAGE_NAME: "data/dataset/FVQA/f0/fvqa_train_img_name.json"
+    IMAGES_PATH: "data/dataset/FVQA/new_dataset_release/images/"
+    IMAGES_FEATS_PATH: "F:/vqa/img_feats/fvqa_train/"
+    TEXTS_FEATS_PATH: "F:/vqa/text_feats/fvqa/"
+
+  fvqa_val:
+    QUESTIONS_FILE: "data/dataset/FVQA/f0/test_fvqa.json"
+    IID2IMAGE_NAME: "data/dataset/FVQA/f0/fvqa_test_img_name.json"
+    IMAGES_PATH: "data/dataset/FVQA/new_dataset_release/images/"
+    IMAGES_FEATS_PATH: "F:/vqa/img_feats/fvqa_test/"
+
+  textvqa_train:
+    QUESTIONS_FILE: "data/dataset/TextVQA/formatted_textvqa/textvqa_v5.1_train.json"
+    IID2IMAGE_NAME: "data/dataset/TextVQA/formatted_textvqa/train_img_name.json"
+    IMAGES_PATH: "data/dataset/TextVQA/train2021/"
+    IMAGES_FEATS_PATH: "F:/vqa/img_feats/textvqa_train/"
+    TEXTS_FEATS_PATH: "F:/vqa/text_feats/textvqa/"
+
+  textvqa_val:
+    QUESTIONS_FILE: "data/dataset/TextVQA/formatted_textvqa/textvqa_v5.1_val.json"
+    IID2IMAGE_NAME: "data/dataset/TextVQA/formatted_textvqa/val_img_name.json"
+    IMAGES_PATH: "data/dataset/TextVQA/train2021/"
+    IMAGES_FEATS_PATH: "F:/vqa/img_feats/textvqa_test/"
