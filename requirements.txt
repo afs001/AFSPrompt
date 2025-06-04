@@ -1,0 +1,5 @@
+sentence_transformers==2.2.2
+torch==1.13.0
+tqdm==4.66.5
+transformers==4.31.0
+pipreqs ./ --force
