@@ -55,10 +55,10 @@ For related implementations, see: [Prophet](https://github.com/MILVLG/prophet)
 This project is developed based on [https://github.com/MILVLG/prophet](https://github.com/MILVLG/prophet).
 
 ## Code update progress
-- [x] Organize project structure and main modules
-- [ ] Internal code testing and optimization
-- [x] Write main documentation (README, usage instructions, etc.)
-- [x] Code release
+- [x] Organize project structure and main modules  
+- [x] Write main documentation (README, usage instructions, etc.)  
+- [x] Core code release  
+- [ ] Demo web testing and optimization  
 
 ```bibte
 @ARTICLE{11021086,
