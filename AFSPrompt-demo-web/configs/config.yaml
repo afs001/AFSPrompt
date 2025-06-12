@@ -1,0 +1,9 @@
+retrieval:
+  TASK: okvqa
+  Topk: 20
+  Nsam: 5
+  Ktim: 1
+
+vqa:
+  max_token: 8
+

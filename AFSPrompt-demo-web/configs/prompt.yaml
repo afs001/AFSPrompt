@@ -1,0 +1,4 @@
+PROMPT_HEAD: "Please answer the question according to the context and candidate answers. Each candidate answer is associated with a confidence score within a bracket. The true answer may not be included in the candidate answers. \n\n"
+LINE_PREFIX: "===\n"
+
+K_CANDIDATES: 10

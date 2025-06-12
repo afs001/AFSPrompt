@@ -1,0 +1,6 @@
+okvqa:
+  txt_path: E:\2023\VQA\OFAALL\OFA_MAIN\okvqa\okvqa_train.json
+  img_path: E:\2023\VQA\OFAALL\OFA_MAIN\data\train2014
+  cap_path: asserts/okvqa/captions_okvqa.json
+  tag_path: asserts/okvqa/tags_okvqa.json
+  ans_path: asserts/okvqa/candidates_okvqa.json
