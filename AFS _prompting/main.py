@@ -7,6 +7,13 @@
 """
 import argparse
 
+import yaml
+
+from configs.task_cfgs import Cfgs
+from evaluation.aokvqa_evaluate import AOKEvaluater
+from evaluation.okvqa_evaluate import OKEvaluater
+from .prompt_runner import Runner
+
 
 def prompt_login_args(parser):
     parser.add_argument('--debug', dest='DEBUG', help='debug mode', action='store_true')
@@ -17,19 +24,19 @@ def prompt_login_args(parser):
     parser.add_argument('--examples_path', dest='EXAMPLES_PATH',
                         help='answer-aware example file path',
                         type=str,
-                        default="data/assets/aok/val/avg_a_ok_val_examples.json")
+                        default="assets/aok/val/avg_a_ok_val_examples.json")
     parser.add_argument('--candidates_path', dest='CANDIDATES_PATH',
                         help='candidates file path', type=str,
-                        default="data/assets/candidates_aokvqa_val.json")
+                        default="assets/candidates_aokvqa_val.json")
     parser.add_argument('--captions_path', dest='CAPTIONS_PATH',
                         help='captions file path', type=str,
-                        default="data/assets/captions_aokvqa.json")
+                        default="assets/captions_aokvqa.json")
     parser.add_argument('--tags_path', dest='TAGS_PATH',
                         help='tags file path', type=str,
-                        default="data/assets/tags_okvqa.json")
+                        default="assets/tags_okvqa.json")
     parser.add_argument('--knowledge_path', dest='KNOWLEDGE_PATH',
                         help='knowledge file path', type=str,
-                        default="data/assets/gpt3_okvqa.json")
+                        default="assets/gpt3_okvqa.json")
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Heuristics-enhanced Prompting')

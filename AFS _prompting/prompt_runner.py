@@ -5,6 +5,14 @@
 @time: 2025/5/23 10:27
 @desc: 
 """
+import json
+import os
+from pathlib import Path
+
+from model import llm_infer
+from utils.data_utils import Qid2Data
+from utils.fancy_pbar import info_column, progress
+
 
 class Runner:
     def __init__(self, __C, evaluater):
@@ -29,37 +37,6 @@ class Runner:
         if ans is not None:
             prompt_text += f' {ans}'
         return prompt_text
-
-    def example_make(self, ques, capt, know=None, cands=None, ans=None):
-        prompt_txt = self.__C.ollama["PROMPT_USER"]
-        context = "" + f"Context: {capt}\n"
-        if know is not None:
-            context += f'Knowledge: {know}\n'
-        context += f"Question: {ques}\n"
-        if cands is not None:
-            cands = cands[:self.__C.K_CANDIDATES]
-            cands_with_conf = [f'{cand["answer"]}({cand["confidence"]:.2f})' for cand in cands]
-            cands = ', '.join(cands_with_conf)
-            context += f'Candidates: {cands}'
-        if ans is not None:
-            prompt_txt = prompt_txt.format(context)+f'\nAnswer: {ans}\n'
-        else:
-            prompt_txt = "###\n"+ "Please answer the question according to the context and candidate answers, (eg. Answer: )\n<<<\n"+ prompt_txt.format(context)+"\n>>>\nAnswer:"
-        return prompt_txt
-
-    def get_context1(self, example_qids):
-        prompt_head = self.__C.ollama["PROMPT_HEAD"].format(self.__C.PROMPT_HEAD)
-        examples = []
-        for key in example_qids:
-            ques = self.trainset.get_question(key)
-            caption = self.trainset.get_caption(key)
-            # know = self.trainset.get_knowledge(key)
-            cands = self.trainset.get_topk_candidates(key)
-            gt_ans = self.trainset.get_most_answer(key)
-            examples.append((ques, caption, cands, gt_ans))
-            prompt_head += self.example_make(ques, caption, know=None, cands=cands, ans=gt_ans)
-            # prompt_head += '\n\n'
-        return prompt_head
 
     def get_context(self, example_qids):
         # making context text for one testing input
@@ -137,7 +114,7 @@ class Runner:
                 # print(f'Infer {t}...')
                 prompt_in_ctx = self.get_context(example_qids[(N_inctx * t):(N_inctx * t + N_inctx)])
                 prompt_text = prompt_in_ctx + prompt_query
-                gen_text, gen_prob = ollama_infer(prompt_text)
+                gen_text, gen_prob = llm_infer(prompt_text)
 
                 ans = self.evaluater.prep_ans(gen_text)
                 if ans != '':

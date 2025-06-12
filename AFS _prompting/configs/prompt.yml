@@ -1,0 +1,20 @@
+PROMPT_HEAD: "Please answer the question according to the context and candidate answers. Each candidate answer is associated with a confidence score within a bracket. The true answer may not be included in the candidate answers. \n\n"
+#PROMPT_HEAD: "You are an expert in answering the question according to the context and candidate answers. 1. Determine question concern via context. 2. Use extra knowledge to answer. 3. Compare with candidate answers for final response. Let's work this out in a step by step way to be sure we have the right answer.\n\n"
+LINE_PREFIX: "===\n"
+
+EXAMPLE_PREFIX: "Here are a few examples:\n"
+QUERY_PREFIX: "Now, please answer the following question based on the context and candidate answers:\n"
+
+ollama:
+  # llama
+#  PROMPT_HEAD: "<|begin_of_text|><|start_header_id|>system<|end_header_id|>{}<|eot_id|>"
+#  PROMPT_USER: "<|start_header_id|>user<|end_header_id|>{}<|eot_id|><|start_header_id|>assi"stant<|end_header_id|>{}"
+
+  # Mistral
+  PROMPT_HEAD: "{}"
+  PROMPT_USER: "{}"
+
+
+N_EXAMPLES: 5
+K_CANDIDATES: 10
+T_INFER: 1
