@@ -43,9 +43,9 @@ with gr.Blocks(title="一种基于公理模糊集上下文重排的视觉问答�
             with gr.Column(scale=1, min_width=600):
                 question_input = gr.Textbox(label="输入你的问题", value="这个人在干嘛？")
                 # L代表检索示例个数，N代表单个提示使用多少示例，K代表推理次数
-                L_input = gr.Slider(label="L", minimum=1, maximum=10, step=1, interactive=True, value=10)
-                N_input = gr.Slider(label="N", minimum=1, maximum=5, step=1, interactive=True, value=5)
-                K_input = gr.Slider(label="K", minimum=1, maximum=2, step=1, interactive=True, value=1)
+                L_input = gr.Slider(label="L", minimum=1, maximum=10, step=1, interactive=False, value=10)
+                N_input = gr.Slider(label="N", minimum=1, maximum=5, step=1, interactive=False, value=5)
+                K_input = gr.Slider(label="K", minimum=1, maximum=2, step=1, interactive=False, value=1)
         gr.Markdown("### 提示头：")
         gr.Markdown("#### Please answer the question according to the context and candidate answers. Each candidate answer is associated with a confidence score within a bracket. The true answer may not be included in the candidate answers. \n\n")
         # context_output1 = gr.Textbox(label="上下文信息")
