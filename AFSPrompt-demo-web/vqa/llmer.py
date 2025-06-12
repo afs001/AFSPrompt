@@ -11,7 +11,7 @@ from langchain_ollama import OllamaLLM
 
 host="127.0.0.1"
 port="11434" #默认的端口号为11434
-llm=OllamaLLM(base_url=f"http://{host}:{port}", model="qwen2.5:0.5b",temperature=0.1, num_predict=10, stop=["\n"])
+llm=OllamaLLM(base_url=f"http://{host}:{port}", model="xxxx",temperature=0.1, num_predict=10, stop=["\n"])
 
 template = "{question}"
 

@@ -51,6 +51,9 @@ The `AFS rerank system` directory contains module for reranking and scoring.
 This module implements the AFS prompting system and supports various small large language models (such as Mistral, Llama, Gemma) as knowledge engines.  
 For related implementations, see: [Prophet](https://github.com/MILVLG/prophet)
 
+### AFS Prompt Web
+![Web](./docs/afsprompt_web.png)
+
 ## Acknowledgements
 This project is developed based on [https://github.com/MILVLG/prophet](https://github.com/MILVLG/prophet).
 
@@ -58,7 +61,7 @@ This project is developed based on [https://github.com/MILVLG/prophet](https://g
 - [x] Organize project structure and main modules  
 - [x] Write main documentation (README, usage instructions, etc.)  
 - [x] Core code release  
-- [ ] Demo web testing and optimization  
+- [x] Demo web testing and optimization  
 
 ```bibte
 @ARTICLE{11021086,
